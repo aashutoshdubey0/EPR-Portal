@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Producer Registration</title>
+  <link rel="stylesheet" href="producer.css">
+</head>
+<body>
+    <div class="logo-container">
+        <img id="logo" src="bisleri.jpg">
+    </div>
+  <div class="header-container">
+    <h1>EPR Documents Management System</h1>
+    <hr>
+  </div>
+  <div class="container">
+    <h2>Producer Registration</h2>
+    <form id="registrationForm" enctype="multipart/form-data">
+      <label for="serialNumber">Serial Number:</label>
+      <input type="text" id="serialNumber" name="serialNumber" required>
+      
+      <label for="registrationtype">Registration Type:</label>
+        <select id="registrationtype" name="registrationtype" required>
+        <option value="">Select Registration Type:</option>
+        <option value="registered">Registered with CPCB</option>
+        <option value="unregistered">Unregistered with CPCB</option>
+        </select>
+      
+      <label for="entityType">Entity Type:</label>
+      <select id="entityType" name="entityType" disabled>
+        <option value="producer" selected>Producer</option>
+      </select>
+
+      <label for="nameoftheenterprise">Name of the Enterprise:</label>
+      <input type="text" id="nameoftheenterprise" name="nameoftheenterprise" required>
+
+      <label for="state">State:</label>
+        <select id="state" name="state">
+          <option value="">Select State</option>
+          <option value="AN">Andaman and Nicobar Islands (AN)</option>
+          <option value="AP">Andhra Pradesh (AP)</option>
+          <option value="AR">Arunachal Pradesh (AR)</option>
+          <option value="AS">Assam (AS)</option>
+          <option value="BR">Bihar (BR)</option>
+          <option value="CH">Chandigarh (CH)</option>
+          <option value="CG">Chhattisgarh (CG)</option>
+          <option value="DNH">Dadra and Nagar Haveli (DNH)</option>
+          <option value="DD">Daman and Diu (DD)</option>
+          <option value="DL">Delhi (DL)</option>
+          <option value="GA">Goa (GA)</option>
+          <option value="GJ">Gujarat (GJ)</option>
+          <option value="HR">Haryana (HR)</option>
+          <option value="HP">Himachal Pradesh (HP)</option>
+          <option value="JK">Jammu and Kashmir (JK)</option>
+          <option value="JH">Jharkhand (JH)</option>
+          <option value="KA">Karnataka (KA)</option>
+          <option value="KL">Kerala (KL)</option>
+          <option value="LD">Lakshadweep (LD)</option>
+          <option value="MP">Madhya Pradesh (MP)</option>
+          <option value="MH">Maharashtra (MH)</option>
+          <option value="MN">Manipur (MN)</option>
+          <option value="ML">Meghalaya (ML)</option>
+          <option value="MZ">Mizoram (MZ)</option>
+          <option value="NL">Nagaland (NL)</option>
+          <option value="OR">Odisha (OR)</option>
+          <option value="PY">Puducherry (PY)</option>
+          <option value="PB">Punjab (PB)</option>
+          <option value="RJ">Rajasthan (RJ)</option>
+          <option value="SK">Sikkim (SK)</option>
+          <option value="TN">Tamil Nadu (TN)</option>
+          <option value="TS">Telangana (TS)</option>
+          <option value="TR">Tripura (TR)</option>
+          <option value="UP">Uttar Pradesh (UP)</option>
+          <option value="UK">Uttarakhand (UK)</option>
+          <option value="WB">West Bengal (WB)</option>
+        </select>
+
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="text" id="phone" name="phone" required>
+
+        <label for="plasticmaterialtype">Plastic Material Type:</label>
+        <select id="plasticmaterialtype" name="plasticmaterialtype" required>
+            <option value="">Select Plastic Material Type</option>
+            <option value="PET">PET</option>
+            <option value="PVC">PVC</option>
+            <!-- Rest of the options -->
+        </select>
+
+        <label for="otherplasticmaterialtype">Other Plastic Material Type</label>
+        <input type="text" id="otherplasticmaterialtype" name="otherplasticmaterialtype" required>
+
+        <label for="categoryofplastic">Category of Plastic:</label>
+        <select id="categoryofplastic" name="categoryofplastic" required>
+          <option value="">Select Category of Plastic</option>
+          <option value="xyz">XYZ</option>
+          <!-- Rest of the options -->
+        </select>
+
+        <label for="financialyear">Financial Year:</label>
+        <input type="number" id="financialyear" name="financialyear" min="1900" max="2100" required>
+        
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="totalplasticquantity">Total Plastic Quantity (in metric tonnes):</label>
+        <input type="number" id="totalplasticquantity" name="totalplasticquantity" required>
+
+        <label for="regularplasticcontent">Regular Plastic Content (in %):</label>
+        <input type="number" id="regularplasticcontent" name="regularplasticcontent" min="0" max="100" step="10" required>
+        
+        <label for="gstnumber">GST Number:</label>
+        <input type="text" id="gstnumber" name="gstnumber" required>
+
+        <label for="gstpaid">GST Paid (in INR):</label>
+        <input type="number" id="gstpaid" name="gstpaid" required>
+
+        <label for="gstinvoice">GST Invoice Number:</label>
+        <input type="number" id="gstinvoice" name="gstinvoice" required>
+
+        <label for="pdfname">PDF Name:</label>
+        <input type="text" id="pdfname" name="pdfname" required>
+
+        <label for="pdfFile">Upload PDF:</label>
+        <input type="file" id="pdfFile" name="pdfFile" accept=".pdf" required>
+        <input type="submit" value="Submit">
+    </form>
+  </div>
+  <script src="producer.js"></script>
+</body>
+</html>
