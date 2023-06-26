@@ -17,7 +17,40 @@ app.use(express.static(publicPath))
 app.use(express.static(assetsPath))
 
 app.get("/",(req,res)=>{
-    res.render("home");
+    res.render("login");
+})
+
+app.post("/registration",async(req,res)=>{
+    const data = {
+        fullName:req.body.fullName,
+        userName:req.body.userName,
+        password:req.body.password,
+        email:req.body.email,
+        role:req.body.role,
+        enterprise:req.body.enterprise,
+        registrationType:req.body.registrationType,
+        state:req.body.state,
+        address:req.body.address,
+        department:req.body.department,
+        employerID:req.body.employerID
+    }
+    await collection.insertMany([data])
+    res.render("login")
+})
+
+app.post("/login",async(req,res)=>{
+    try{
+        const check = await collection.findOne({userName:req.body.userName})
+        if(check.password===req.body.password){
+            res.render("success")
+        }
+        else{
+            res.send("wrong password")
+        }
+    }
+    catch{
+        res.send("wrong details")
+    }
 })
 
 app.listen(port,()=>{
